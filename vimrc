@@ -16,11 +16,7 @@ map <silent> <C-]> :set noic<cr>g<C-]><silent>:set ic<cr>
 " Line Wrap {{{
 set backspace=indent,eol,start "bs: allows you to backspace over the listed character types
 set linebreak "lbr: causes vim to not wrap text in the middle of a word
-<<<<<<< HEAD
 set nowrap "nowrap: do not wrap lines by default
-=======
-set nowrap "wrap: do not wrap lines by default
->>>>>>> d4ad83bc92d17cd8a5c57bc4cee6175fbee9befd
 " Toggle line wrapping in normal mode:
 nmap <silent> <C-P> :set nowrap!<cr>:set nowrap?<cr>
 noremap <silent> <Leader>w :call ToggleWrap()<cr>
