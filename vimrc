@@ -483,6 +483,8 @@ else
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 endif
+""" NerdTree settings
+map <leader>t :NERDTreeToggle<CR>
 """ Airline settings
 " let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace = 2
@@ -501,7 +503,8 @@ try
 catch
 endtry
 " search a file in the filetree
-nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+"nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <space><space> :<C-u>Unite -start-insert file<cr>
 " reset not it is <C-l> normally
 " :nnoremap <space>r <Plug>(unite_restart)
 "" --- type ° to search the word in all files in the current dir
