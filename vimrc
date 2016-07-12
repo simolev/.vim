@@ -251,6 +251,8 @@ map <F12> :syntax sync fromstart<cr>
 let g:matchparen_insert_timeout = 5
 set synmaxcol=500 "smc: Stop syntax highlighting on very long lines
 syntax enable
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.ad set filetype=asciidoc
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -483,6 +485,8 @@ else
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 endif
+""" NerdTree settings
+map <leader>t :NERDTreeToggle<CR>
 """ Airline settings
 " let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace = 2
@@ -501,7 +505,9 @@ try
 catch
 endtry
 " search a file in the filetree
-nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+"nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <space><space> :<C-u>Unite -start-insert file<cr>
+
 " reset not it is <C-l> normally
 " :nnoremap <space>r <Plug>(unite_restart)
 "" --- type ° to search the word in all files in the current dir
