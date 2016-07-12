@@ -251,6 +251,8 @@ map <F12> :syntax sync fromstart<cr>
 let g:matchparen_insert_timeout = 5
 set synmaxcol=500 "smc: Stop syntax highlighting on very long lines
 syntax enable
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.ad set filetype=asciidoc
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
