@@ -93,7 +93,8 @@ map <leader>O :set paste<cr>m`O<esc>``:set nopaste<cr>
 map <F2> :reg "0123456789-*+:/<cr>
 " set colorcolumn=80 "cc: draw a visual line down the 80th column
 " Toggle between line numbers and relative line numbers
-nnoremap <silent><leader>u :exe "set " . (&relativenumber == 1 ? "norelativenumber" : "relativenumber")<cr>
+nnoremap <silent><leader>u :exe "set " . (&relativenumber == 1 ? "norelativenumber" : "relativenumber") . " " . (&number == 1 ? "nonumber" : "number")<cr>
+nnoremap <silent><leader>U :exe "set " . (&relativenumber == 1 ? "norelativenumber" : "relativenumber")<cr>
 "lcs: displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,trail:\ ,precedes:<,extends:>
 " Toggle spell-checking
@@ -150,7 +151,7 @@ nmap <silent> <leader>dts :exe ':r !date '. escape(b:dateformat, '%')<cr>
 " Spacebar toggles a fold, zi toggles all folding, zM closes all folds
 noremap <silent> <space> :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr>
 set foldmethod=marker "fdm: looks for patterns of triple-braces in a file
-set foldcolumn=4 "fdc: creates a small left-hand gutter for displaying fold info
+set foldcolumn=0 "fdc: creates a small left-hand gutter for displaying fold info
 " }}}
 " Menu completion {{{
 set suffixes+=.pyc,.pyo " Don't autocomplete these filetypes
@@ -229,6 +230,7 @@ nmap <silent> <leader>du :diffupdate<cr>
 " (I.e.: don't do any automatic integration, please :)
 set mouse= " Disable mouse control for console Vim (very annoying)
 set clipboard= " Disable automatic X11 clipboard crossover
+vnoremap Y "+y
 " }}}
 " Color {{{
 " All coloring options are for the non-GUI Vim (see :help cterm-colors).
