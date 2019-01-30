@@ -438,6 +438,8 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+" Allow pasting the same text multiple times
+xnoremap p pgvy
 " }}}
 " Plugin settings {{{
 """ Run matchit without installing
