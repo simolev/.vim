@@ -176,7 +176,6 @@ set history=200 "hi: number of search patterns and ex commands to remember
 set viminfo='200 "vi: For a nice, huuuuuge viminfo file
 if &columns < 88
 " If we can't fit at least 80-cols, don't display these screen hogs
-set nonumber
 set foldcolumn=0
 endif
 " }}}
