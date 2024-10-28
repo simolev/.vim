@@ -13,9 +13,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
-[submodule "bundle/MatchTagAlways"]
-	path = bundle/MatchTagAlways
-	url = https://github.com/Valloric/MatchTagAlways.git
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
