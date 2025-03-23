@@ -4,7 +4,7 @@ Hi Content Team, here's an outline of the issues and how we tackled them.
 
 #|affected machine | area | description | resolution
 -|-|-|-|-
-1|client & server | wireguard config | <ul><li>wrong subnet defined on the client</li><li>missing `6pn` peer addresses</li><li>mismatched MTUs</li></ul> | corrected the configs and reset the Wireguard link
+1|client & server | wireguard config | <ul><li>wrong subnet defined on the client</li><li>missing `6pn` peer addresses</li><li>mismatched MTUs</li></ul> | corrected the configs (subnet `192.168.0.0`, default MTU) and reset the Wireguard link
 2|client & server | firewall | `ipv6` rule blocking the Wireguard port `51820` |deleted the rule
 3|client | routes | route for the Wireguard subnet on the wrong interface `192.168.0.0/24 via 172.19.5.10 dev eth0`| deleted the route
 4|server | system setting | ignore ping requests | set `net.ipv4.icmp_echo_ignore_all=0`
